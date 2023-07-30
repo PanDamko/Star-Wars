@@ -1,11 +1,14 @@
 import React from 'react'
 import MainTemplates from '../templates/MainTemplates'
-import DataTemplates from '../templates/DataTemplates'
+import WaitLoading from '../templates/WaitLoading'
 
 const PlanetsPage = () => {
+
+const url="https://swapi.tech/api/planets/"
+  
   return (
     <MainTemplates>
-       <DataTemplates />
+       <WaitLoading url={url} />
         </MainTemplates>
   )
 }

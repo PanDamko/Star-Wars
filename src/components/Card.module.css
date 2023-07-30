@@ -25,6 +25,10 @@
     justify-content: center;
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
-    height: 40%;
+    
+    font-size: 1vw;
 
+}
+.card1:hover{
+    scale:1.2;
 }

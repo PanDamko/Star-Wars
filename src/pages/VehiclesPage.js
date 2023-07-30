@@ -1,10 +1,13 @@
 import React from 'react'
 import MainTemplates from '../templates/MainTemplates'
-import DataTemplates from '../templates/DataTemplates'
-
+import WaitLoading from '../templates/WaitLoading'
 const VehiclesPage = () => {
+  const url="https://swapi.tech/api/vehicles/"
+  const films = false
   return (
-    <div><MainTemplates><DataTemplates /></MainTemplates></div>
+    <MainTemplates>
+       <WaitLoading url={url} films={films} />
+        </MainTemplates>
   )
 }
 

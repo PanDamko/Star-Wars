@@ -5,6 +5,7 @@ import SpaceshipsPage from "./pages/SpaceshipsPage"
 import VehiclesPage from "./pages/VehiclesPage"
 import PeoplePage from "./pages/PeoplePage";
 import FilmsPage from "./pages/FilmsPage"
+import DetailsPage from "./pages/DetailsPage";
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
         <Route path="/vechicles" element={<VehiclesPage/>} />
         <Route path="/people" element={<PeoplePage/>} />
         <Route path="/films" element={<FilmsPage />} />
+        <Route path="/details" element={<DetailsPage />} />
       </Routes>
       </BrowserRouter>
     </div>
