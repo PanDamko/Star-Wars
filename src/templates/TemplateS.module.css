@@ -1,0 +1,39 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.leftarrow{
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    scale:5;
+    opacity: 0.2;
+    
+}
+.rightarrow{
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+    scale:5;
+    opacity: 0.2;
+ 
+}
+.rightarrow:hover{
+    scale: 10;
+    opacity: 0.6;
+}
+.leftarrow:hover{
+    scale: 10;
+    opacity: 0.6;
+}

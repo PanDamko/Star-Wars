@@ -1,0 +1,5 @@
+.back{
+    background-image: url("../../public/images/orionnebula.jpg");
+    background-size: cover;
+    height:100vh
+}
