@@ -1,29 +1,34 @@
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react'
 import Card from '../components/Card'
 import styles from '../templates/TemplateS.module.css'
-import DetailsPage from '../pages/DetailsPage'
 
 
-const DataTemplates = ({setCnt, cnt, data, films}) => {
+
+
+
+const DataTemplates = ({setCnt, cnt, data,}) => {
   useEffect(() => {
-    cnt === 0 && setCnt(len-1)
-    cnt >= len && setCnt(1)
+    cnt === -1 && setCnt(len)
+    cnt >= len-4 && setCnt(0)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cnt])
-
-  const image = "dasa"
  
-  
   const len = data.data.results.length
- 
+  console.log(len);
+  console.log(cnt);
   return (
-    <div className={styles.row}>
-       <i className={styles.leftarrow} onClick={() => setCnt(cnt - 1)}></i>
-      <Card image={image} name={films ? data.data.results[cnt-1].title : data.data.results[cnt-1].name} />
-      <Card image="adsad" name={films ? data.data.results[cnt].title : data.data.results[cnt].name} />
-      <Card image="adsad" name={films ? data.data.results[cnt+1].title : data.data.results[cnt+1].name} />
-      <Card image="adsad" name={films ? data.data.results[cnt+2].title : data.data.results[cnt+2].name} />
-      <Card image="adsad" name={films ? data.data.results[cnt+3].title : data.data.results[cnt+3].name} />
+    
+    <div className={styles.row} >
+     
+     {/* {cnt === 0  ? "":<i className={styles.leftarrow} onClick={() => setCnt(cnt - 1)}></i>} */}
+     <i className={styles.leftarrow} onClick={() => setCnt(cnt - 1)}></i>
+      {data.data.results[cnt] === undefined  ?"":<Card object={data.data.results[cnt]}  />}
+      {data.data.results[cnt+1] === undefined  ?"":<Card object={data.data.results[cnt+1]} />}
+      {data.data.results[cnt+2] === undefined  ?"":<Card object={data.data.results[cnt+2]} />}
+      {data.data.results[cnt+3] === undefined  ?"": <Card object={data.data.results[cnt+3]} />}
+      {data.data.results[cnt+4] === undefined  ?"":<Card  object={data.data.results[cnt+4]} />}
       <i className={styles.rightarrow} onClick={() => setCnt(cnt + 1)}></i>
+      {/* {cnt >= 5  ? "":<i className={styles.rightarrow} onClick={() => setCnt(cnt + 1)}></i>} */}
     </div>
 
   )

@@ -1,0 +1,14 @@
+.details{
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+  }
+  .details2{
+    color: #ffc909;
+    display: flex;
+   
+    justify-content: center;
+   
+}

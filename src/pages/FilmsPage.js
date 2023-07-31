@@ -2,7 +2,7 @@ import React from 'react'
 import MainTemplates from '../templates/MainTemplates'
 import WaitLoading from '../templates/WaitLoading'
 const FilmsPage = () => {
-  const url="https://swapi.dev/api/films/"
+  const url="https://swapi.tech/api/films/"
   const films = true;
   return (
     <MainTemplates>

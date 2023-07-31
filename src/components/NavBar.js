@@ -29,7 +29,7 @@ const NavBar = () => {
                         <Link to="/people">People</Link>
                     </li>
                     <li className={styles.navitem}>
-                        <Link to="/films">Films</Link>
+                        <Link to="/species">Species</Link>
                     </li>
                     
                 </ul>
